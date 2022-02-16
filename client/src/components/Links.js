@@ -1,24 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const Collapse = styled.div.attrs({
+  className: "collpase navbar-collapse",
+})``;
+
+const List = styled.div.attrs({
+  className: "navbar-nav mr-auto",
+})``;
+
+const Item = styled.div.attrs({
+  className: "collpase navbar-collapse",
+})``;
 
 function Links() {
   return (
     <>
-      <div className="links-main">
+      <React.Fragment>
         <Link to="/" className="navbar-brand">
-          My First Mern Application
+          My First MERN Application
         </Link>
-
-        <span className="items">
-          <Link to="/movies/list" className="nav-link">
-            List Movies
-          </Link>
-          <Link to="/movies/create" className="nav-link">
-            Create Movie
-          </Link>
-        </span>
-      </div>
-      ;
+        <Collapse>
+          <List>
+            <Item>
+              <Link to="/movies/list" className="nav-link">
+                List Movies
+              </Link>
+            </Item>
+            <Link to="/movies/create" className="nav-link">
+              Create Movie
+            </Link>
+          </List>
+        </Collapse>
+      </React.Fragment>
     </>
   );
 }

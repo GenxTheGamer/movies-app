@@ -1,11 +1,17 @@
 import React from "react";
 import logo from "../logo.svg";
-import "../styles/Logo.css";
+import styled from "styled-components";
+
+const Wrapper = styled.a.attrs({
+  className: "navbar-brand",
+})``;
 
 function Logo() {
   return (
     <>
-      <img src={logo} alt="sambarros.com" />
+      <Wrapper href="https://sambarros.com">
+        <img src={logo} width="50" height="50" alt="sambarros.com" />
+      </Wrapper>
     </>
   );
 }
