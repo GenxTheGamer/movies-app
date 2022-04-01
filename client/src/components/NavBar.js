@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Links from "./Links";
 import Logo from "./Logo";
 import styled from "styled-components";
@@ -13,17 +13,19 @@ const Nav = styled.div.attrs({
   margin-bottom: 20px;
 `;
 
-function NavBar() {
-  return (
-    <>
-      <Container>
-        <Nav>
-          <Logo />
-          <Links />
-        </Nav>
-      </Container>
-    </>
-  );
+class NavBar extends Component {
+  render() {
+    return (
+      <>
+        <Container>
+          <Nav>
+            <Logo />
+            <Links />
+          </Nav>
+        </Container>
+      </>
+    );
+  }
 }
 
 export default NavBar;

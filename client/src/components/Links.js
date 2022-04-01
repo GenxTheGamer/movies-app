@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -14,28 +14,30 @@ const Item = styled.div.attrs({
   className: "collpase navbar-collapse",
 })``;
 
-function Links() {
-  return (
-    <>
-      <React.Fragment>
-        <Link to="/" className="navbar-brand">
-          My First MERN Application
-        </Link>
-        <Collapse>
-          <List>
-            <Item>
-              <Link to="/movies/list" className="nav-link">
-                List Movies
+class Links extends Component {
+  render() {
+    return (
+      <>
+        <React.Fragment>
+          <Link to="/" className="navbar-brand">
+            Movies Database
+          </Link>
+          <Collapse>
+            <List>
+              <Item>
+                <Link to="/movies/list" className="nav-link">
+                  List Movies
+                </Link>
+              </Item>
+              <Link to="/movies/create" className="nav-link">
+                Create Movie
               </Link>
-            </Item>
-            <Link to="/movies/create" className="nav-link">
-              Create Movie
-            </Link>
-          </List>
-        </Collapse>
-      </React.Fragment>
-    </>
-  );
+            </List>
+          </Collapse>
+        </React.Fragment>
+      </>
+    );
+  }
 }
 
 export default Links;

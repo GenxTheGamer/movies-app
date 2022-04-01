@@ -1,13 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
 
-function MoviesInsert() {
-  return (
-    <>
-      <div>
-        <p>In this page you'll see form to add movies.</p>
-      </div>
-    </>
-  );
+class MoviesInsert extends Component {
+  render() {
+    return (
+      <>
+        <div>
+          <p>In this page you'll see form to add movies.</p>
+        </div>
+      </>
+    );
+  }
 }
 
 export default MoviesInsert;
